@@ -1,0 +1,39 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+      "title": "ApiRestCrossover",
+      "version": "v1"
+    },
+    "servers":[
+        {
+            "url":"https://localhost:44364/"
+        }
+    ],
+    "paths": {
+      "/api/Login/GetAuthentication": {
+        "get": {
+          "tags": [
+            "Login"
+          ],
+          "responses": {
+            "200": {
+              "description": "Success"
+            }
+          }
+        }
+      },
+      "/api/Repository/GetRepository": {
+        "get": {
+          "tags": [
+            "Repository"
+          ],
+          "responses": {
+            "200": {
+              "description": "Success"
+            }
+          }
+        }
+      }
+    },
+    "components": { }
+  }

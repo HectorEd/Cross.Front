@@ -1,0 +1,49 @@
+<header>
+    <div class="container">
+        <p class="logo">DevCrossover</p>
+    </div>
+</header>
+<section id="api-functions">
+    <div class="container">
+        <h2>Consume API</h2>
+        <div class="functions">
+            <div class="carta">
+                <h3 >Autenticar Usuario</h3>
+                <button class="clickBtn authViolet" [ngClass]="{authViolet:!autentified, authGreen:autentified}" (click)="this.getAuthenticate()" >
+                    <span> {{ !autentified ? 'Autenticar' : 'Autentificado' }}</span>
+                </button>
+            </div>
+            <div class="carta">
+                <nav>
+                    <H3>¿Consultar Repositorios GitHub?</H3>
+                    <button><a href="#ir-tabla"><h1>GO</h1></a></button>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="title-2">Primeros 10 Repositorios GitHub</h3>
+                    <table id="ir-tabla" class="table">
+                        <tbody>
+                            <tr *ngFor="let repository of listRepository">
+                                <td>{{repository.id}}</td>
+                                <td>{{repository.name}}</td>
+                                <td>{{repository.html_url}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <p>&copy;Héctor González 2022</p>
+    </div>
+</footer>
